@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">TrueOverflow</string>
+
+    <!-- Line Item Strings -->
+    <string name="line_item_answer_count_content_description">Number of answers</string>
+    <string name="line_item_creator">Creator</string>
+    <string name="line_item_default_answer_count">0</string>
+    <string name="line_item_date_content_description">date</string>
+    <string name="line_item_default_date">Jan 1, 1970</string>
+    <string name="line_item_default_question">Question..?</string>
+    <string name="line_item_default_score">0</string>
+    <string name="line_item_default_view_count">0 views</string>
+    <string name="line_item_question_answered">Whether the question has been answerred</string>
+    <string name="line_item_question_content_description">Question</string>
+    <string name="line_item_score_content_description">score</string>
+    <string name="line_item_view_count_content_description">number of views</string>
 </resources>
