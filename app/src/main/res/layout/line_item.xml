@@ -3,14 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@drawable/line_item_border">
 
     <TextView
         android:id="@+id/Creator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:contentDescription="@string/line_item_creator"
         app:layout_constraintBottom_toBottomOf="@+id/date"
         app:layout_constraintEnd_toStartOf="@+id/date"
@@ -20,14 +21,15 @@
 
     <ImageView
         android:id="@+id/profile_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:contentDescription="@string/line_item_creator"
+        app:layout_constraintDimensionRatio="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@tools:sample/avatars[0]"
+        app:srcCompat="@mipmap/ic_launcher_round"
         tools:srcCompat="@tools:sample/avatars" />
 
     <CheckBox
@@ -35,13 +37,11 @@
         style="@style/Widget.AppCompat.CompoundButton.CheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:checked="true"
         android:clickable="false"
         android:contentDescription="@string/line_item_question_answered"
-        app:layout_constraintEnd_toStartOf="@+id/question"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -49,9 +49,10 @@
         android:id="@+id/view_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:contentDescription="@string/line_item_view_count_content_description"
         android:text="@string/line_item_default_view_count"
-        app:layout_constraintBottom_toBottomOf="@+id/Creator"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/score"
         app:layout_constraintStart_toStartOf="@+id/score"
         tools:text="@string/line_item_default_view_count" />
@@ -60,11 +61,10 @@
         android:id="@+id/answer_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:contentDescription="@string/line_item_answer_count_content_description"
         android:text="@string/line_item_default_answer_count"
         app:layout_constraintBottom_toBottomOf="@+id/score"
-        app:layout_constraintEnd_toEndOf="@+id/checkBox"
         app:layout_constraintStart_toEndOf="@+id/score"
         app:layout_constraintTop_toTopOf="@+id/score"
         tools:text="@string/line_item_default_answer_count" />
@@ -73,8 +73,8 @@
         android:id="@+id/score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:contentDescription="@string/line_item_score_content_description"
         android:text="@string/line_item_default_score"
         app:layout_constraintBottom_toTopOf="@+id/view_count"
@@ -86,9 +86,11 @@
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:contentDescription="@string/line_item_date_content_description"
         android:text="@string/line_item_default_date"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/profile_image"
         app:layout_constraintStart_toStartOf="@+id/profile_image"
         app:layout_constraintTop_toBottomOf="@+id/profile_image"
@@ -96,13 +98,15 @@
 
     <TextView
         android:id="@+id/question"
-        android:layout_width="195dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:contentDescription="@string/line_item_question_content_description"
         android:text="@string/line_item_default_question"
         app:layout_constraintEnd_toStartOf="@+id/profile_image"
+        app:layout_constraintStart_toEndOf="@+id/checkBox"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/line_item_default_question" />
 </android.support.constraint.ConstraintLayout>
