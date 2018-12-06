@@ -1,4 +1,4 @@
-gitpackage com.gotruemotion.trueoverflow
+package com.gotruemotion.trueoverflow
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
